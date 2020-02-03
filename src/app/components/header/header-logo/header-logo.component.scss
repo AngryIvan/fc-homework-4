@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+:host > *{
+  padding-right: 10px;
+}
+
+img {
+  height: 50px;
+}

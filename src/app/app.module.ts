@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderLogoComponent } from './components/header/header-logo/header-logo.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -49,6 +50,7 @@ const MAT_IMPORTS = [
 @NgModule({
   declarations: [
     ...COMPONENTS,
+    TruncatePipe,
   ],
   imports: [
     BrowserModule,

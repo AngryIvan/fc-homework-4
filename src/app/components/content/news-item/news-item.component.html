@@ -1,1 +1,12 @@
-<p>news-item works!</p>
+<article>
+  <img src="{{news.thumbnail}}" alt="thumbnail"/>
+  <div class="article-info">
+    <h2>{{news.title}}</h2>
+    <p>{{news.description | truncate:[250]}}</p>
+  </div>
+  <p>Date: {{news.date}}</p>
+  <div class="control-buttons">
+    <button mat-raised-button color="primary">Edit</button>
+    <button mat-raised-button color="primary">Delete</button>
+  </div>
+</article>

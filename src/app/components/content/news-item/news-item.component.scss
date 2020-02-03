@@ -1,0 +1,28 @@
+:host {
+  width: 70%;
+}
+
+article {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  height: 200px;
+}
+
+img {
+  height: 150px;
+  margin: 25px;
+}
+
+.article-info {
+  width: 50%;
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+

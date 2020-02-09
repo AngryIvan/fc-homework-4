@@ -1,4 +1,8 @@
-<app-content-settings (checkBoxStatus)="filterArray($event)"></app-content-settings>
+<app-source [source]="source"></app-source>
+<app-content-settings
+  (checkBoxStatus)="filterArray($event)"
+  (selectionChange)="onSelectionChange($event)">
+</app-content-settings>
 <section class="news-section">
   <app-news-item *ngFor="let news of newsArray" [news]="news"></app-news-item>
 </section>

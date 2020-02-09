@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginButtonComponent } from './components/header/login-button/login-button.component';
-import { SourceComponent } from './components/source/source.component';
+import { SourceComponent } from './components/content/source/source.component';
 import { ContentSettingsComponent } from './components/content-settings/content-settings.component';
 import { SelectSourceComponent } from './components/content-settings/select-source/select-source.component';
 import { FilterContentComponent } from './components/content-settings/filter-content/filter-content.component';

@@ -6,11 +6,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./content-settings.component.scss']
 })
 export class ContentSettingsComponent implements OnInit {
-
-  constructor() { }
   @Output() checkBoxStatus = new EventEmitter();
+  @Output() selectionChange = new EventEmitter();
 
   ngOnInit() {
+  }
+
+  onSelectionChange(selected) {
+    this.selectionChange.emit(selected);
   }
 
   onCheckboxChecked(status) {

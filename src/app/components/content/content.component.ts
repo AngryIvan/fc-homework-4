@@ -29,10 +29,16 @@ const news = [
 
 export class ContentComponent implements OnInit {
   newsArray: any[];
+  source: string;
   constructor() { }
 
   ngOnInit() {
     this.newsArray = news;
+    this.source = 'BBC';
+  }
+
+  onSelectionChange(source) {
+    this.source = source;
   }
 
   filterArray(status) {

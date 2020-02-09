@@ -1,8 +1,8 @@
 <mat-form-field>
   <mat-label>Select a source</mat-label>
-  <mat-select [(value)]="selected">
-    <mat-option *ngFor="let source of sources" [value]="source.value">
-      {{source.viewValue}}
+  <mat-select [(value)]="selected" (selectionChange)="onSelectionChange($event)">
+    <mat-option *ngFor="let source of sourceList" [value]="source">
+      {{source}}
     </mat-option>
   </mat-select>
 </mat-form-field>

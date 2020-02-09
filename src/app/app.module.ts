@@ -24,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { CreateEditPageComponent } from './components/create-edit-page/create-edit-page.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -52,6 +53,7 @@ const MAT_IMPORTS = [
   declarations: [
     ...COMPONENTS,
     TruncatePipe,
+    CreateEditPageComponent,
   ],
   imports: [
     BrowserModule,

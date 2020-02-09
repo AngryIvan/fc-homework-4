@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-content-settings',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ContentSettingsComponent implements OnInit {
 
   constructor() { }
+  @Output() checkBoxStatus = new EventEmitter();
 
   ngOnInit() {
   }
 
+  onCheckboxChecked(status) {
+    this.checkBoxStatus.emit(status);
+  }
 }

@@ -1,8 +1,8 @@
 <mat-checkbox
     color="primary"
-    [(checked)]="checked"
-    [(indeterminate)]="indeterminate"
+    [(ngModel)]="checked"
     [labelPosition]="labelPosition"
-    [disabled]="disabled">
+    [disabled]="disabled"
+    (click)="handleCheck()">
   Only created by me
 </mat-checkbox>

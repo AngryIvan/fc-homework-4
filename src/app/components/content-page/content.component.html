@@ -2,7 +2,9 @@
 <app-content-settings
   (checkBoxStatus)="filterArray($event)"
   (selectionChange)="onSelectionChange($event)">
+  (filterWord)="onFilterClick($event)"
+>
 </app-content-settings>
 <section class="news-section">
-  <app-news-item *ngFor="let news of newsArray" [news]="news"></app-news-item>
+<app-news-item *ngFor="let news of newsArray | filter" [news]="news"></app-news-item>
 </section>

@@ -11,11 +11,14 @@ import { NewsService } from 'src/app/services/news.service';
 export class ContentComponent implements OnInit {
   newsArray: any[];
   source: string;
+  filterWord: string;
+
   constructor(private news: NewsService) { }
 
   ngOnInit() {
     this.newsArray = this.news.getNews();
     this.source = 'BBC';
+    this.filterWord = '';
   }
 
   onSelectionChange(source) {

@@ -19,6 +19,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderLogoComponent } from './components/header/header-logo/header-logo.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -54,8 +55,9 @@ const MAT_IMPORTS = [
   declarations: [
     ...COMPONENTS,
     TruncatePipe,
+    FilterPipe,
     CreateEditPageComponent,
-    FormComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

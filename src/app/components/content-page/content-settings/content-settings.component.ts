@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class ContentSettingsComponent implements OnInit {
   @Output() checkBoxStatus = new EventEmitter();
   @Output() selectionChange = new EventEmitter();
+  @Output() filterWord = new EventEmitter();
 
   ngOnInit() {
   }
@@ -18,5 +19,9 @@ export class ContentSettingsComponent implements OnInit {
 
   onCheckboxChecked(status) {
     this.checkBoxStatus.emit(status);
+  }
+
+  onFilterClick(filterText) {
+    this.filterWord.emit(filterText);
   }
 }

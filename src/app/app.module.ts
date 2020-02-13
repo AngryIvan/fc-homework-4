@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CreateEditPageComponent } from './components/create-edit-page/create-edit-page.component';
+import { FormComponent } from './components/create-edit-page/form/form.component';
 
 const COMPONENTS = [
   AppComponent,
@@ -54,12 +55,14 @@ const MAT_IMPORTS = [
     ...COMPONENTS,
     TruncatePipe,
     CreateEditPageComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     ...MAT_IMPORTS
   ],
   providers: [],

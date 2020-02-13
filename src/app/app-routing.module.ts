@@ -5,7 +5,8 @@ import { CreateEditPageComponent } from './components/create-edit-page/create-ed
 
 
 const routes: Routes = [
-  { path: 'create', component: CreateEditPageComponent},
+  { path: 'create', component: CreateEditPageComponent, data: { title: 'create'}},
+  { path: 'edit', component: CreateEditPageComponent, data: { title: 'edit'}},
   { path: '', component: ContentComponent}
 ];
 

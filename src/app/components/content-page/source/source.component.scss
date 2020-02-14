@@ -1,5 +1,11 @@
-:host div{
+section {
+  display: block;
+  width: 100%;
+}
+
+div {
   height: 100px;
+  width: 100%;
   background-color: cornflowerblue;
   display: flex;
   justify-content: center;

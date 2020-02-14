@@ -11,6 +11,7 @@ export class FormComponent implements OnInit {
   newsForm = new FormGroup({
     heading: new FormControl(),
     description: new FormControl(),
+    content: new FormControl(),
     image: new FormControl(),
     date: new FormControl(),
     author: new FormControl(),

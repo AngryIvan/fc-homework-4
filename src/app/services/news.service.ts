@@ -9,8 +9,8 @@ export class NewsService{
 
   constructor() { }
 
-  getNews() {
+  getNews(limit) {
     this.news = news;
-    return this.news;
+    return this.news.slice(0, limit);
   }
 }

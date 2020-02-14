@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-load-more',
   templateUrl: './load-more.component.html',
   styleUrls: ['./load-more.component.scss']
 })
-export class LoadMoreComponent implements OnInit {
+export class LoadMoreComponent {
+  @Output() showMore = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  increaseLimit() {
+    this.showMore.emit();
   }
-
 }

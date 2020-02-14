@@ -14,7 +14,7 @@ export class CreateEditPageComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.subscribe(data => {
       this.action = data.title;
-    })
+    });
   }
 
 }

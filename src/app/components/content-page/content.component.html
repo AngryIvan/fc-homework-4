@@ -6,5 +6,6 @@
 >
 </app-content-settings>
 <section class="news-section">
-<app-news-item *ngFor="let news of newsArray | filter" [news]="news"></app-news-item>
+  <app-news-item *ngFor="let news of newsArray | filter" [news]="news"></app-news-item>
+  <app-load-more (showMore)="increaseLimit()"></app-load-more>
 </section>

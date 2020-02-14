@@ -1,13 +1,42 @@
 <form [formGroup]="newsForm">
+  <div>
+    <mat-form-field>
+      <mat-label>Heading:</mat-label>
+      <input type="text" matInput formControlName="heading">
+    </mat-form-field>
 
-  <label>
-    Heading:
-    <input type="text" formControlName="heading">
-  </label>
+    <mat-form-field>
+    <mat-label>Short desciption:</mat-label>
+      <input type="text" matInput formControlName="description">
+    </mat-form-field>
 
-  <label>
-    Short desciption:
-    <input type="text" formControlName="description">
-  </label>
+    <mat-form-field>
+      <mat-label>Content:</mat-label>
+      <textarea rows="15" type="text" matInput formControlName="content"></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>
+      Image URL:</mat-label>
+      <input type="text" matInput formControlName="image">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date:</mat-label>
+      <input type="text" matInput formControlName="date">
+    </mat-form-field>
 
+    <mat-form-field>
+      <mat-label>Author:</mat-label>
+      <input type="text" matInput formControlName="author">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>SourceURL:</mat-label>
+      <input type="text" matInput formControlName="sourceUrl">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Save</button>
+    <a routerLink="/"><button mat-raised-button color="primary">Cancel</button></a>
+  </div>
 </form>

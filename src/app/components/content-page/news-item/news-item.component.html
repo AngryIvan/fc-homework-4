@@ -6,7 +6,7 @@
   </div>
   <p>Date: {{news.date}}</p>
   <div class="control-buttons" *ngIf="news.createdByMe">
-    <button mat-raised-button color="primary">Edit</button>
+    <a routerLink="/edit"><button mat-raised-button color="primary">Edit</button></a>
     <button mat-raised-button color="primary">Delete</button>
   </div>
 </article>

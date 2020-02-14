@@ -12,11 +12,13 @@ export class ContentComponent implements OnInit {
   newsArray: any[];
   source: string;
   filterWord: string;
+  limit: number;
 
   constructor(private news: NewsService) { }
 
   ngOnInit() {
-    this.newsArray = this.news.getNews();
+    this.limit = 3;
+    this.newsArray = this.news.getNews(this.limit);
     this.source = 'BBC';
     this.filterWord = '';
   }
@@ -27,10 +29,15 @@ export class ContentComponent implements OnInit {
 
   filterArray(status) {
     if (status) {
-      this.newsArray = this.news.getNews().filter(item => item.createdByMe);
+      this.newsArray = this.news.getNews(this.limit).filter(item => item.createdByMe);
     } else {
-      this.newsArray = this.news.getNews();
+      this.newsArray = this.news.getNews(this.limit);
     }
+  }
+
+  increaseLimit() {
+    this.limit += 3;
+    this.newsArray = this.news.getNews(this.limit);
   }
 
 }
